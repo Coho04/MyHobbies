@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "composer" 
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0 
+    assignees:
+      - "Coho04" 
+  - package-ecosystem: "npm"
+    directory: "/" 
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+    assignees:
+      - "Coho04" 
