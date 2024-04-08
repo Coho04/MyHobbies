@@ -18,6 +18,8 @@ class CreateHobbiesTable extends Migration
             $table->String('name');
             $table->text('beschreibung');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

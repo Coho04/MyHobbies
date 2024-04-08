@@ -12,14 +12,12 @@ class CreateHobbyTagTable extends Migration
     public function up()
     {
         Schema::create('hobby_tag', function (Blueprint $table) {
-            $table->unsignedBigInteger('hobby_id')->nullable();
-            $table->unsignedBigInteger('tag_id')->nullable();
+            $table->foreignIdFor(\App\Models\Hobby::class)->nullable()->index();
+            $table->foreignIdFor(\App\Models\Tag::class)->nullable();
             $table->timestamps();
-
-            $table->primary(['hobby_id', 'tag_id']);
-            $table->foreign('hobby_id')->references('id')->on('hobbies')->onDelete('cascade');
-            //tag
-            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+//            $table->primary(['hobby_id', 'tag_id']);
+//            $table->foreign('hobby_id')->references('id')->on('hobbies')->onDelete('cascade');
+//            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
         });
     }
 

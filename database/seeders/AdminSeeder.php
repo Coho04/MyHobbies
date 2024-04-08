@@ -17,9 +17,9 @@ class AdminSeeder extends Seeder
         $admin = new User(
             [
                 'name' => 'Collin',
-                'email' => 'masterclassudemy@gmail.com',
+                'email' => 'example@example.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('test 123'),
+                'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
                 'rolle' => 'admin'
             ]
