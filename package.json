@@ -7,7 +7,7 @@
     },
     "devDependencies": {
         "vite": "^4.5.3",
-        "axios": "^1.6.8",
+        "axios": "^1.7.4",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
         "lodash": "^4.17.19",
